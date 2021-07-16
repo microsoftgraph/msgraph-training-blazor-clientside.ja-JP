@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 766f41b3d838130a5e0b64ba22425496eecb1c71
-ms.sourcegitcommit: 5067c508675fbedbc7eead0869308d00b63be8e3
+ms.openlocfilehash: c9fb7269969b0ef4e0300b8884c3ed168216b6cc
+ms.sourcegitcommit: ef990e983274cb161bfe16a8dff801d30a798f04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "49584689"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "53446967"
 ---
 <!-- markdownlint-disable MD002 MD041 -->
 
-この演習では、Azure Active Directory 管理センターを使用して、新しい Azure AD web アプリケーション登録を作成します。
+この演習では、管理者センターを使用して新AD Azure Azure Active Directory作成します。
 
 1. ブラウザーを開き、[Azure Active Directory 管理センター](https://aad.portal.azure.com)へ移動します。 **個人用アカウント** (別名: Microsoft アカウント)、または **職場/学校アカウント** を使用してログインします。
 
@@ -20,12 +20,10 @@ ms.locfileid: "49584689"
 
     - `Blazor Graph Tutorial` に **[名前]** を設定します。
     - **[サポートされているアカウントの種類]** を **[任意の組織のディレクトリ内のアカウントと個人用の Microsoft アカウント]** に設定します。
-    - **[リダイレクト URI]** で、最初のドロップダウン リストを `Web` に設定し、それから `https://localhost:5001/authentication/login-callback` に値を設定します。
+    - [ **リダイレクト URI] で**、最初のドロップダウンを [単一ページ アプリケーション **(SPA)** に設定し、値をに設定します `https://localhost:5001/authentication/login-callback` 。
 
     ![[アプリケーションを登録する] ページのスクリーンショット](./images/aad-register-an-app.png)
 
-1. **[登録]** を選択します。 [ **Blazor Graph のチュートリアル** ] ページで、 **アプリケーション (クライアント) ID** の値をコピーして保存します。次の手順で必要になります。
+1. **[登録]** を選択します。 **[Blazor Graphチュートリアル**] ページで、**アプリケーション (クライアント) ID** の値をコピーして保存します。次の手順で必要になります。
 
     ![新しいアプリ登録のアプリケーション ID のスクリーンショット](./images/aad-application-id.png)
-
-1. **[管理]** の下の **[認証]** を選択します。 暗黙的な **grant** セクションを見つけ、 **アクセストークン** と **ID トークン** を有効にします。 **[保存]** を選択します。
