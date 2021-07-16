@@ -1,78 +1,78 @@
 ---
-ms.openlocfilehash: 744df064e4fdc1bbf7821ae43a7b7878148902e9
-ms.sourcegitcommit: 5067c508675fbedbc7eead0869308d00b63be8e3
+ms.openlocfilehash: 4c021fe8aac9b42ee0984a15e73366ead847ee06
+ms.sourcegitcommit: ef990e983274cb161bfe16a8dff801d30a798f04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "49584683"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "53446978"
 ---
 <!-- markdownlint-disable MD002 MD041 -->
 
-<span data-ttu-id="0f3b2-101">まず、Blazor WebAssembly アプリを作成します。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-101">Start by creating a Blazor WebAssembly app.</span></span>
+<span data-ttu-id="906e3-101">まず、Blazor WebAssembly アプリを作成します。</span><span class="sxs-lookup"><span data-stu-id="906e3-101">Start by creating a Blazor WebAssembly app.</span></span>
 
-1. <span data-ttu-id="0f3b2-102">プロジェクトを作成するディレクトリで、コマンドラインインターフェイス (CLI) を開きます。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-102">Open your command-line interface (CLI) in a directory where you want to create the project.</span></span> <span data-ttu-id="0f3b2-103">次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-103">Run the following command.</span></span>
+1. <span data-ttu-id="906e3-102">プロジェクトを作成するディレクトリでコマンド ライン インターフェイス (CLI) を開きます。</span><span class="sxs-lookup"><span data-stu-id="906e3-102">Open your command-line interface (CLI) in a directory where you want to create the project.</span></span> <span data-ttu-id="906e3-103">次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="906e3-103">Run the following command.</span></span>
 
     ```Shell
     dotnet new blazorwasm --auth SingleOrg -o GraphTutorial
     ```
 
-    <span data-ttu-id="0f3b2-104">この `--auth SingleOrg` パラメーターにより、生成されたプロジェクトに、Microsoft identity platform による認証の構成が含まれるようになります。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-104">The `--auth SingleOrg` parameter causes the generated project to include configuration for authentication with the Microsoft identity platform.</span></span>
+    <span data-ttu-id="906e3-104">この `--auth SingleOrg` パラメーターを使用すると、生成されたプロジェクトに、認証用の構成が含Microsoft ID プラットフォーム。</span><span class="sxs-lookup"><span data-stu-id="906e3-104">The `--auth SingleOrg` parameter causes the generated project to include configuration for authentication with the Microsoft identity platform.</span></span>
 
-1. <span data-ttu-id="0f3b2-105">プロジェクトが作成されたら、現在のディレクトリを **Graphtutorial** ディレクトリに変更し、CLI で次のコマンドを実行して、動作を確認します。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-105">Once the project is created, verify that it works by changing the current directory to the **GraphTutorial** directory and running the following command in your CLI.</span></span>
+1. <span data-ttu-id="906e3-105">プロジェクトが作成されると、現在のディレクトリを **GraphTutorial** ディレクトリに変更し、CLI で次のコマンドを実行して動作します。</span><span class="sxs-lookup"><span data-stu-id="906e3-105">Once the project is created, verify that it works by changing the current directory to the **GraphTutorial** directory and running the following command in your CLI.</span></span>
 
     ```Shell
     dotnet watch run
     ```
 
-1. <span data-ttu-id="0f3b2-106">ブラウザーを開き、を参照し `https://localhost:5001` ます。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-106">Open your browser and browse to `https://localhost:5001`.</span></span> <span data-ttu-id="0f3b2-107">すべてが動作している場合は、"Hello, world!" と表示されます。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-107">If everything is working, you should see a "Hello, world!"</span></span> <span data-ttu-id="0f3b2-108">メッセージ。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-108">message.</span></span>
+1. <span data-ttu-id="906e3-106">ブラウザーを開き、を参照します `https://localhost:5001` 。</span><span class="sxs-lookup"><span data-stu-id="906e3-106">Open your browser and browse to `https://localhost:5001`.</span></span> <span data-ttu-id="906e3-107">すべてが機能している場合は、"Hello, world!</span><span class="sxs-lookup"><span data-stu-id="906e3-107">If everything is working, you should see a "Hello, world!"</span></span> <span data-ttu-id="906e3-108">メッセージ。</span><span class="sxs-lookup"><span data-stu-id="906e3-108">message.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="0f3b2-109">**Localhost** の証明書が信頼されていないことを示す警告が表示された場合は、.NET コア CLI を使用して開発証明書をインストールして信頼できます。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-109">If you receive a warning that the certificate for **localhost** is un-trusted you can use the .NET Core CLI to install and trust the development certificate.</span></span> <span data-ttu-id="0f3b2-110">特定のオペレーティングシステムの手順については、「 [ASP.NET Core で HTTPS を強制](/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.1) する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-110">See [Enforce HTTPS in ASP.NET Core](/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.1) for instructions for specific operating systems.</span></span>
+> <span data-ttu-id="906e3-109">**localhost** の証明書が信頼されていないという警告を受け取った場合は、.NET Core CLI を使用して開発証明書をインストールして信頼できます。</span><span class="sxs-lookup"><span data-stu-id="906e3-109">If you receive a warning that the certificate for **localhost** is un-trusted you can use the .NET Core CLI to install and trust the development certificate.</span></span> <span data-ttu-id="906e3-110">特定[のオペレーティング システムの手順については、「ASP.NET Core](/aspnet/core/security/enforcing-ssl)で HTTPS を適用する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="906e3-110">See [Enforce HTTPS in ASP.NET Core](/aspnet/core/security/enforcing-ssl) for instructions for specific operating systems.</span></span>
 
-## <a name="add-nuget-packages"></a><span data-ttu-id="0f3b2-111">NuGet パッケージを追加する</span><span class="sxs-lookup"><span data-stu-id="0f3b2-111">Add NuGet packages</span></span>
+## <a name="add-nuget-packages"></a><span data-ttu-id="906e3-111">NuGet パッケージを追加する</span><span class="sxs-lookup"><span data-stu-id="906e3-111">Add NuGet packages</span></span>
 
-<span data-ttu-id="0f3b2-112">に進む前に、後で使用する追加の NuGet パッケージをインストールします。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-112">Before moving on, install some additional NuGet packages that you will use later.</span></span>
+<span data-ttu-id="906e3-112">次に進む前に、後で使用NuGet追加のパッケージをインストールします。</span><span class="sxs-lookup"><span data-stu-id="906e3-112">Before moving on, install some additional NuGet packages that you will use later.</span></span>
 
-- <span data-ttu-id="0f3b2-113">[Microsoft.Graph](https://www.nuget.org/packages/Microsoft.Graph/): Microsoft Graph を呼び出すためのものです。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-113">[Microsoft.Graph](https://www.nuget.org/packages/Microsoft.Graph/) for making calls to Microsoft Graph.</span></span>
-- <span data-ttu-id="0f3b2-114">Windows タイムゾーン識別子を IANA 識別子に変換するための[TimeZoneConverter](https://github.com/mj1856/TimeZoneConverter) 。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-114">[TimeZoneConverter](https://github.com/mj1856/TimeZoneConverter) for translating Windows time zone identifiers to IANA identifiers.</span></span>
+- <span data-ttu-id="906e3-113">[Microsoft.Graph](https://www.nuget.org/packages/Microsoft.Graph/): Microsoft Graph を呼び出すためのものです。</span><span class="sxs-lookup"><span data-stu-id="906e3-113">[Microsoft.Graph](https://www.nuget.org/packages/Microsoft.Graph/) for making calls to Microsoft Graph.</span></span>
+- <span data-ttu-id="906e3-114">タイム ゾーン識別子を IANA 識別子Windows変換する[TimeZoneConverter。](https://github.com/mj1856/TimeZoneConverter)</span><span class="sxs-lookup"><span data-stu-id="906e3-114">[TimeZoneConverter](https://github.com/mj1856/TimeZoneConverter) for translating Windows time zone identifiers to IANA identifiers.</span></span>
 
-1. <span data-ttu-id="0f3b2-115">CLI で次のコマンドを実行して、依存関係をインストールします。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-115">Run the following commands in your CLI to install the dependencies.</span></span>
+1. <span data-ttu-id="906e3-115">依存関係をインストールするには、CLI で次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="906e3-115">Run the following commands in your CLI to install the dependencies.</span></span>
 
     ```Shell
-    dotnet add package Microsoft.Graph --version 3.18.0
+    dotnet add package Microsoft.Graph --version 4.0.0
     dotnet add package TimeZoneConverter
     ```
 
-## <a name="design-the-app"></a><span data-ttu-id="0f3b2-116">アプリを設計する</span><span class="sxs-lookup"><span data-stu-id="0f3b2-116">Design the app</span></span>
+## <a name="design-the-app"></a><span data-ttu-id="906e3-116">アプリを設計する</span><span class="sxs-lookup"><span data-stu-id="906e3-116">Design the app</span></span>
 
-<span data-ttu-id="0f3b2-117">このセクションでは、アプリケーションの基本的な UI 構造を作成します。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-117">In this section you will create the basic UI structure of the application.</span></span>
+<span data-ttu-id="906e3-117">このセクションでは、アプリケーションの基本的な UI 構造を作成します。</span><span class="sxs-lookup"><span data-stu-id="906e3-117">In this section you will create the basic UI structure of the application.</span></span>
 
-1. <span data-ttu-id="0f3b2-118">テンプレートによって生成されたサンプルページを削除します。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-118">Remove sample pages generated by the template.</span></span> <span data-ttu-id="0f3b2-119">次のファイルを削除します。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-119">Delete the following files.</span></span>
+1. <span data-ttu-id="906e3-118">テンプレートによって生成されたサンプル ページを削除します。</span><span class="sxs-lookup"><span data-stu-id="906e3-118">Remove sample pages generated by the template.</span></span> <span data-ttu-id="906e3-119">次のファイルを削除します。</span><span class="sxs-lookup"><span data-stu-id="906e3-119">Delete the following files.</span></span>
 
-    - <span data-ttu-id="0f3b2-120">**./_/カウンター**</span><span class="sxs-lookup"><span data-stu-id="0f3b2-120">**./Pages/Counter.razor**</span></span>
-    - <span data-ttu-id="0f3b2-121">**.////取得データ**</span><span class="sxs-lookup"><span data-stu-id="0f3b2-121">**./Pages/FetchData.razor**</span></span>
-    - <span data-ttu-id="0f3b2-122">**./Shared/SurveyPrompt.razor**</span><span class="sxs-lookup"><span data-stu-id="0f3b2-122">**./Shared/SurveyPrompt.razor**</span></span>
-    - <span data-ttu-id="0f3b2-123">**./wwwroot/sample-data/weather.js**</span><span class="sxs-lookup"><span data-stu-id="0f3b2-123">**./wwwroot/sample-data/weather.json**</span></span>
+    - <span data-ttu-id="906e3-120">**./Pages/Counter.razor**</span><span class="sxs-lookup"><span data-stu-id="906e3-120">**./Pages/Counter.razor**</span></span>
+    - <span data-ttu-id="906e3-121">**./Pages/FetchData.razor**</span><span class="sxs-lookup"><span data-stu-id="906e3-121">**./Pages/FetchData.razor**</span></span>
+    - <span data-ttu-id="906e3-122">**./Shared/SurveyPrompt.razor**</span><span class="sxs-lookup"><span data-stu-id="906e3-122">**./Shared/SurveyPrompt.razor**</span></span>
+    - <span data-ttu-id="906e3-123">**./wwwroot/sample-data/weather.json**</span><span class="sxs-lookup"><span data-stu-id="906e3-123">**./wwwroot/sample-data/weather.json**</span></span>
 
-1. <span data-ttu-id="0f3b2-124">**/Wwwroot/index.html** を開き、終了タグの **直前に** 次のコードを追加し `</body>` ます。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-124">Open **./wwwroot/index.html** and add the following code just **before** the closing `</body>` tag.</span></span>
+1. <span data-ttu-id="906e3-124">**./wwwroot/index.html を開** き、終了タグの直前に次 **のコード** を追加 `</body>` します。</span><span class="sxs-lookup"><span data-stu-id="906e3-124">Open **./wwwroot/index.html** and add the following code just **before** the closing `</body>` tag.</span></span>
 
     :::code language="html" source="../demo/GraphTutorial/wwwroot/index.html" id="BootStrapJSSnippet":::
 
-    <span data-ttu-id="0f3b2-125">これにより、 [ブートストラップ](https://getbootstrap.com/docs/4.5/getting-started/introduction/) javascript ファイルが追加されます。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-125">This adds the [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) javascript files.</span></span>
+    <span data-ttu-id="906e3-125">これにより、 [ブートストラップ javascript](https://getbootstrap.com/docs/4.5/getting-started/introduction/) ファイルが追加されます。</span><span class="sxs-lookup"><span data-stu-id="906e3-125">This adds the [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) javascript files.</span></span>
 
-1. <span data-ttu-id="0f3b2-126">**/Wwwroot/css/app.css** を開き、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-126">Open **./wwwroot/css/app.css** and add the following code.</span></span>
+1. <span data-ttu-id="906e3-126">**./wwwroot/css/app.css を開** き、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="906e3-126">Open **./wwwroot/css/app.css** and add the following code.</span></span>
 
     :::code language="css" source="../demo/GraphTutorial/wwwroot/css/app.css" id="CssSnippet":::
 
-1. <span data-ttu-id="0f3b2-127">を開き、その内容を次のように置き換えます **。**</span><span class="sxs-lookup"><span data-stu-id="0f3b2-127">Open **./Shared/NavMenu.razor** and replace its contents with the following.</span></span>
+1. <span data-ttu-id="906e3-127">**./Shared/NavMenu.razor** を開き、その内容を次に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="906e3-127">Open **./Shared/NavMenu.razor** and replace its contents with the following.</span></span>
 
     :::code language="razor" source="../demo/GraphTutorial/Shared/NavMenu.razor" id="NavMenuSnippet":::
 
-1. <span data-ttu-id="0f3b2-128">を開き、その内容を次のように置き換えます **。**</span><span class="sxs-lookup"><span data-stu-id="0f3b2-128">Open **./Pages/Index.razor** and replace its contents with the following.</span></span>
+1. <span data-ttu-id="906e3-128">**./Pages/Index.razor を開き**、その内容を次に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="906e3-128">Open **./Pages/Index.razor** and replace its contents with the following.</span></span>
 
     :::code language="razor" source="../demo/GraphTutorial/Pages/Index.razor" id="IndexSnippet":::
 
-1. <span data-ttu-id="0f3b2-129">を開き、その内容を次のように置き換えます **。**</span><span class="sxs-lookup"><span data-stu-id="0f3b2-129">Open **./Shared/LoginDisplay.razor** and replace its contents with the following.</span></span>
+1. <span data-ttu-id="906e3-129">**./Shared/LoginDisplay.razor を開き、** その内容を次に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="906e3-129">Open **./Shared/LoginDisplay.razor** and replace its contents with the following.</span></span>
 
     ```razor
     @using Microsoft.AspNetCore.Components.Authorization
@@ -107,11 +107,11 @@ ms.locfileid: "49584683"
     }
     ```
 
-1. <span data-ttu-id="0f3b2-130">**Img** という名前の **./wwwroot** ディレクトリに新しいディレクトリを作成します。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-130">Create a new directory in the **./wwwroot** directory named **img**.</span></span> <span data-ttu-id="0f3b2-131">このディレクトリに、選択した名前の **no-profile-photo.png** のイメージファイルを追加します。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-131">Add an image file of your choosing named **no-profile-photo.png** in this directory.</span></span> <span data-ttu-id="0f3b2-132">この画像は、ユーザーが Microsoft Graph に写真を持たない場合にユーザーの写真として使用されます。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-132">This image will be used as the user's photo when the user has no photo in Microsoft Graph.</span></span>
+1. <span data-ttu-id="906e3-130">img という名前の **./wwwroot ディレクトリに新しい** ディレクトリを **作成します**。</span><span class="sxs-lookup"><span data-stu-id="906e3-130">Create a new directory in the **./wwwroot** directory named **img**.</span></span> <span data-ttu-id="906e3-131">このディレクトリに、選択した名前 **のno-profile-photo.pngを** 追加します。</span><span class="sxs-lookup"><span data-stu-id="906e3-131">Add an image file of your choosing named **no-profile-photo.png** in this directory.</span></span> <span data-ttu-id="906e3-132">この画像は、ユーザーが Microsoft サーバーで写真を持ってない場合に、ユーザーの写真Graph。</span><span class="sxs-lookup"><span data-stu-id="906e3-132">This image will be used as the user's photo when the user has no photo in Microsoft Graph.</span></span>
 
     > [!TIP]
-    > <span data-ttu-id="0f3b2-133">これらのスクリーンショットに使用されているイメージは、 [GitHub](https://github.com/microsoftgraph/msgraph-training-blazor-clientside/blob/master/demo/GraphTutorial/wwwroot/img/no-profile-photo.png)からダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-133">You can download the image used in these screenshots from [GitHub](https://github.com/microsoftgraph/msgraph-training-blazor-clientside/blob/master/demo/GraphTutorial/wwwroot/img/no-profile-photo.png).</span></span>
+    > <span data-ttu-id="906e3-133">これらのスクリーンショットで使用されている画像は、次のページから[GitHub。](https://github.com/microsoftgraph/msgraph-training-blazor-clientside/blob/master/demo/GraphTutorial/wwwroot/img/no-profile-photo.png)</span><span class="sxs-lookup"><span data-stu-id="906e3-133">You can download the image used in these screenshots from [GitHub](https://github.com/microsoftgraph/msgraph-training-blazor-clientside/blob/master/demo/GraphTutorial/wwwroot/img/no-profile-photo.png).</span></span>
 
-1. <span data-ttu-id="0f3b2-134">すべての変更を保存し、ページを更新します。</span><span class="sxs-lookup"><span data-stu-id="0f3b2-134">Save all of your changes and refresh the page.</span></span>
+1. <span data-ttu-id="906e3-134">すべての変更を保存し、ページを更新します。</span><span class="sxs-lookup"><span data-stu-id="906e3-134">Save all of your changes and refresh the page.</span></span>
 
     ![デザインが変更されたホーム ページのスクリーンショット](./images/create-app-01.png)
